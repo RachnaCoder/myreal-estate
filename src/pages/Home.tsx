@@ -105,7 +105,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -162,7 +162,72 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+<section className="py-16">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Featured Properties
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        Explore our handpicked selection of premium properties
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {featuredProperties.map((property) => (
+        <div
+          key={property.id}
+          className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <div className="relative overflow-hidden">
+            <img
+              src={property.image}
+              alt={property.title}
+              className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
+            />
+            <span className="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold group-hover:scale-105 transition-transform duration-200">
+              {property.type}
+            </span>
+          </div>
+          <div className="p-6">
+            <div className="flex items-center text-gray-600 mb-2">
+              <MapPin className="w-4 h-4 mr-1" />
+              <span className="text-sm">{property.location}</span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              {property.title}
+            </h3>
+            <div className="text-2xl font-bold text-emerald-600 mb-4">
+              {property.price}
+            </div>
+            <div className="flex justify-between text-gray-600 text-sm border-t pt-4">
+              <span>{property.beds} Beds</span>
+              <span>{property.baths} Baths</span>
+              <span>{property.sqft} sqft</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div className="text-center mt-12">
+      <Link
+        to="/services"
+        className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
+      >
+        View All Properties
+      </Link>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
       <section className="py-16 bg-emerald-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
