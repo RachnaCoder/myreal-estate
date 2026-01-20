@@ -104,12 +104,12 @@ const Home = () => {
 
 
 
-
-
 <div className="flex items-center w-full px-4 py-3 border border-gray-300 rounded-lg
                 focus-within:ring-2 focus-within:ring-emerald-500">
   <select
-    className="flex-1 bg-transparent focus:outline-none"
+    className="w-full px-4 py-3 border border-gray-300 rounded-lg
+               appearance-none pr-10 focus:outline-none
+               focus:ring-2 focus:ring-emerald-500"
   >
     <option>Property Type</option>
     <option>House</option>
@@ -342,7 +342,7 @@ const Home = () => {
         <img
           src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
-          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl object-[0_10%]"  
+          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl object-[0_2%]"  
         />
 
       </div>
