@@ -96,7 +96,9 @@ const Home = () => {
   </select>
 
   {/* Custom arrow, placed closer to the text */}
-  <span className="ml-2 text-xs text-gray-500">▼</span>
+  <span className="pointer-events-none absolute left-32 top-1/2 -translate-y-1/2 text-gray-500">
+    ▼
+  </span>
 
 </div>
 
@@ -321,7 +323,7 @@ const Home = () => {
         <img
           src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
-          className="w-full h-64 md:h-72 object-cover  object-top rounded-lg shadow-2xl"  
+          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl"  
         />
 
       </div>
