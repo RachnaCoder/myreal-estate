@@ -71,7 +71,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">About EstatePro</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Your trusted partner in real estate for over 15 years
+            Committed to excellence in every property we handle.
           </p>
         </div>
       </section>

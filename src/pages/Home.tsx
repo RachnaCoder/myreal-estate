@@ -88,7 +88,7 @@ const Home = () => {
                appearance-none pr-10 focus:outline-none
                focus:ring-2 focus:ring-emerald-500"
   >
-    <option>Property Type</option>
+    
     <option>House</option>
     <option>Apartment</option>
     <option>Villa</option>
@@ -320,11 +320,19 @@ const Home = () => {
         </Link>
       </div>
       <div className="relative">
-        <img
+        {/* <img
           src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
           className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl"  
-        />
+        /> */}
+
+<img
+  src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
+  alt="Real estate agent"
+  className="w-full h-72 md:h-80 object-cover rounded-lg shadow-2xl object-top"  // Key additions
+/>
+
+
       </div>
     </div>
   </div>
