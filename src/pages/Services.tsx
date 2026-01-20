@@ -162,7 +162,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-6">
@@ -177,7 +177,29 @@ const Services = () => {
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
-          </div>
+          </div> */}
+
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+  {process.map((item, index) => (
+    <div key={index} className="text-center relative">
+      <div className="relative mb-6">
+        <div className="bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto z-10">
+          {item.step}
+        </div>
+        {/* Line starts from RIGHT edge of circle */}
+        {index < process.length - 1 && (
+          <div className="hidden lg:block absolute top-1/2 -right-4 w-20 h-0.5 bg-emerald-200" />
+        )}
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+      <p className="text-gray-600">{item.description}</p>
+    </div>
+  ))}
+</div>
+
+
+
         </div>
       </section>
 

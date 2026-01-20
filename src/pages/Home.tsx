@@ -96,9 +96,10 @@ const Home = () => {
   </select>
 
   {/* Custom arrow, placed closer to the text */}
-  <span className="pointer-events-none absolute left-32 top-1/2 -translate-y-1/2 text-gray-500">
-    ▼
-  </span>
+  <span className="pointer-events-none absolute left-32 top-1/2 -translate-y-1/2 text-xs text-gray-500">
+  ▼
+</span>
+
 </div>
 
 
@@ -248,7 +249,7 @@ const Home = () => {
 </section>
 
 
-      <section className="py-16 bg-emerald-600 text-white">
+      {/* <section className="py-16 bg-emerald-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -272,8 +273,8 @@ const Home = () => {
               <Link
                 to="/about"
                 className="inline-block mt-8 bg-white text-emerald-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-              >
-                Learn More About Us
+              > */}
+                {/* Learn More About Us
               </Link>
             </div>
             <div className="relative">
@@ -285,7 +286,56 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
+<section className="py-12 bg-emerald-600 text-white">  {/* py-16 → py-12 */}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">  {/* gap-12 → gap-8 */}
+      <div>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">  {/* 3xl/4xl → 2xl/3xl, mb-6 → mb-4 */}
+          Why Choose EstatePro?
+        </h2>
+        <div className="space-y-3">  {/* space-y-4 → space-y-3 */}
+          {[
+            'Extensive property listings across prime locations',
+            'Expert real estate agents with local market knowledge',
+            'Transparent pricing and no hidden fees',
+            'Personalized service tailored to your needs',
+            'End-to-end support from search to closing',
+          ].map((item, index) => (
+            <div key={index} className="flex items-start space-x-3">
+              <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />  {/* w-6 h-6 → w-5 h-5 */}
+              <span className="text-base leading-relaxed">  {/* text-lg → text-base */}
+                {item}
+              </span>
+            </div>
+          ))}
+        </div>
+        <Link
+          to="/about"
+          className="inline-block mt-6 px-6 py-2 rounded-lg hover:bg-gray-100 transition-colors font-semibold"  
+        >
+          Learn More About Us
+        </Link>
+      </div>
+      <div className="relative">
+        <img
+          src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
+          alt="Real estate agent"
+          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl"  
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
