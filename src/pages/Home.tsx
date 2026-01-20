@@ -71,7 +71,8 @@ const Home = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
-              <div>
+
+              {/* <div>
                 <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
                   <option>Property Type</option>
                   <option>House</option>
@@ -79,7 +80,29 @@ const Home = () => {
                   <option>Villa</option>
                   <option>Condo</option>
                 </select>
-              </div>
+              </div> */}
+
+<div className="relative w-full">
+  <select
+    className="w-full px-4 py-3 border border-gray-300 rounded-lg
+               appearance-none pr-10 focus:outline-none
+               focus:ring-2 focus:ring-emerald-500"
+  >
+    <option>Property Type</option>
+    <option>House</option>
+    <option>Apartment</option>
+    <option>Villa</option>
+    <option>Condo</option>
+  </select>
+
+  {/* Custom arrow, placed closer to the text */}
+  <span className="pointer-events-none absolute left-32 top-1/2 -translate-y-1/2 text-gray-500">
+    ▼
+  </span>
+</div>
+
+
+
               <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2">
                 <Search className="w-5 h-5" />
                 <span>Search</span>
@@ -225,10 +248,6 @@ const Home = () => {
 </section>
 
 
-
-
-
-
       <section className="py-16 bg-emerald-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -280,8 +299,8 @@ const Home = () => {
             to="/contact"
             className="inline-flex items-center space-x-2 bg-emerald-600 text-white px-8 py-4 rounded-lg hover:bg-emerald-700 transition-colors text-lg font-semibold"
           >
-            <span>Contact Us Now</span>
-            <DollarSign className="w-5 h-5" />
+            <span>Contact Us</span>
+            {/* <DollarSign className="w-5 h-5" /> */}
           </Link>
         </div>
       </section>
