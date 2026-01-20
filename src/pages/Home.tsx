@@ -213,7 +213,7 @@ const Home = () => {
         <img
           src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
-          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl object-[0_-20px]"  
+          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl object-[0_-10px]"  
         />
 
       </div>
