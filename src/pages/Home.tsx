@@ -72,16 +72,7 @@ const Home = () => {
                 />
               </div>
 
-              {/* <div>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                  <option>Property Type</option>
-                  <option>House</option>
-                  <option>Apartment</option>
-                  <option>Villa</option>
-                  <option>Condo</option>
-                </select>
-              </div> */}
-
+              
 <div className="relative w-full">
   <select
     className="w-full px-4 py-3 border border-gray-300 rounded-lg
@@ -97,14 +88,11 @@ const Home = () => {
   </select>
 
   
-  <span className="pointer-events-none absolute left-32 top-1/2 -translate-y-1/2 text-gray-500">
+  <span className="pointer-events-none absolute left-32 top-1/2 -translate-y-1/2 text-xs text-gray-500">
     ▼
   </span>
 
 </div>
-
-
-
 
               <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2">
                 <Search className="w-5 h-5" />
@@ -131,66 +119,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Properties
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our handpicked selection of premium properties
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProperties.map((property) => (
-              <div
-                key={property.id}
-                className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="relative">
-                  <img
-                    src={property.image}
-                    alt={property.title}
-                    className="w-full h-64 object-cover"
-                  />
-                  <span className="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {property.type}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center text-gray-600 mb-2">
-                    <MapPin className="w-4 h-4 mr-1" />
-                    <span className="text-sm">{property.location}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {property.title}
-                  </h3>
-                  <div className="text-2xl font-bold text-emerald-600 mb-4">
-                    {property.price}
-                  </div>
-                  <div className="flex justify-between text-gray-600 text-sm border-t pt-4">
-                    <span>{property.beds} Beds</span>
-                    <span>{property.baths} Baths</span>
-                    <span>{property.sqft} sqft</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              to="/services"
-              className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
-            >
-              View All Properties
-            </Link>
-          </div>
-        </div>
-      </section> */}
-
-
+      
 <section className="py-16">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
@@ -250,47 +179,6 @@ const Home = () => {
   </div>
 </section>
 
-
-      {/* <section className="py-16 bg-emerald-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Why Choose EstatePro?
-              </h2>
-              <div className="space-y-4">
-                {[
-                  'Extensive property listings across prime locations',
-                  'Expert real estate agents with local market knowledge',
-                  'Transparent pricing and no hidden fees',
-                  'Personalized service tailored to your needs',
-                  'End-to-end support from search to closing',
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                    <span className="text-lg">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <Link
-                to="/about"
-                className="inline-block mt-8 bg-white text-emerald-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-              > */}
-                {/* Learn More About Us
-              </Link>
-            </div>
-            <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Real estate agent"
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-
 <section className="py-12 bg-emerald-600 text-white">  {/* py-16 → py-12 */}
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">  {/* gap-12 → gap-8 */}
@@ -325,20 +213,13 @@ const Home = () => {
         <img
           src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
-          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl"  
+          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl object-[0_ -10px]"  
         />
 
       </div>
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
