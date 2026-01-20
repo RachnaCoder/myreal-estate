@@ -82,25 +82,44 @@ const Home = () => {
                 </select>
               </div> */}
 
-<div className="relative w-full">
+{/* <div className="relative w-full">
   <select
     className="w-full px-4 py-3 border border-gray-300 rounded-lg
                appearance-none pr-10 focus:outline-none
                focus:ring-2 focus:ring-emerald-500"
   >
-    <option>Property</option>
+    <option>Property type</option>
     <option>House</option>
     <option>Apartment</option>
     <option>Villa</option>
     <option>Condo</option>
   </select>
 
-  {/* Custom arrow, placed closer to the text */}
+  
   <span className="pointer-events-none absolute left-32 top-1/2 -translate-y-1/2 text-gray-500">
     ▼
   </span>
 
+</div> */}
+
+
+
+
+
+<div className="flex items-center w-full px-4 py-3 border border-gray-300 rounded-lg
+                focus-within:ring-2 focus-within:ring-emerald-500">
+  <select
+    className="flex-1 bg-transparent focus:outline-none"
+  >
+    <option>Property Type</option>
+    <option>House</option>
+    <option>Apartment</option>
+    <option>Villa</option>
+    <option>Condo</option>
+  </select>
+  <span className="ml-2 text-gray-500">▼</span>
 </div>
+
 
 
 
@@ -323,7 +342,7 @@ const Home = () => {
         <img
           src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
-          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl"  
+          className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl object-[0_10%]"  
         />
 
       </div>
