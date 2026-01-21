@@ -218,13 +218,12 @@ const Home = () => {
         /> */}
 
 <img
-  src="https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg?auto=compress&cs=tinysrgb&w=800"
+  src="/agentpic.jpg"
   alt="Real estate agent"
   className="w-full h-64 md:h-72 object-contain rounded-lg shadow-2xl bg-emerald-700"
  />
 
-
-
+ 
       </div>
     </div>
   </div>
