@@ -1,6 +1,6 @@
 import { Search, MapPin, Home as HomeIcon,TrendingUp, Award, Users, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import agentpic from "./assets/agentpic.jpg";
+import agentpic from "../assets/agentpic.jpg";
 
 const Home = () => {
   const featuredProperties = [
