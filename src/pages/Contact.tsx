@@ -86,8 +86,9 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border-2 border-gray-200 shadow-xl">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Send Us a Message</h2>
+              {/* "text-3xl font-bold text-gray-900 mb-6" */}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
