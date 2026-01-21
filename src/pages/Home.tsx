@@ -220,7 +220,7 @@ const Home = () => {
 
 <img src={agentpic}
   alt="Real estate agent"
-  className="w-full h-64 md:h-72 object-contain rounded-lg shadow-2xl bg-emerald-700"
+  className="w-full h-64 md:h-72 object-contain rounded-lg shadow-2xl"
  />
 
       </div>
