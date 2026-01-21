@@ -211,7 +211,7 @@ const Home = () => {
         </Link>
       </div>
       {/* <div className="relative"> */}
-<div className="relative max-w-sm mx-auto">
+<div className="relative max-w-sm mx-auto  rounded-xl overflow-hidden">
       
       {/* <img src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
