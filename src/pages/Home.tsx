@@ -223,7 +223,6 @@ const Home = () => {
   className="w-full h-64 md:h-72 object-contain rounded-lg shadow-2xl bg-emerald-700"
  />
 
- 
       </div>
     </div>
   </div>
