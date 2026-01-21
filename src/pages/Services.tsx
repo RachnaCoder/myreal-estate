@@ -180,14 +180,14 @@ const Services = () => {
           </div> */}
 
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+{/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
   {process.map((item, index) => (
     <div key={index} className="text-center relative">
       <div className="relative mb-6">
         <div className="bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto z-10">
           {item.step}
         </div>
-        {/* Line starts from RIGHT edge of circle */}
+        
         {index < process.length - 1 && (
           <div className="hidden lg:block absolute top-1/2 -right-4 w-20 h-0.5 bg-emerald-200" />
         )}
@@ -196,7 +196,32 @@ const Services = () => {
       <p className="text-gray-600">{item.description}</p>
     </div>
   ))}
+</div> */}
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+  {/* Overlay lines container */}
+  <div className="absolute inset-0 pointer-events-none hidden lg:grid lg:grid-cols-4 gap-8">
+    {Array.from({length: 3}, (_, i) => (
+      <div key={i} className="flex items-center h-full">
+        <div className="flex-1 h-0.5 bg-emerald-200 mx-2" />
+      </div>
+    ))}
+  </div>
+  
+  {/* Your existing steps */}
+  {process.map((item, index) => (
+    <div key={index} className="text-center relative">
+      <div className="relative mb-6 z-10">
+        <div className="bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto">
+          {item.step}
+        </div>
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+      <p className="text-gray-600">{item.description}</p>
+    </div>
+  ))}
 </div>
+
 
 
 
