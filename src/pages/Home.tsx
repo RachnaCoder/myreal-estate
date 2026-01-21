@@ -221,7 +221,7 @@ const Home = () => {
 <img src={agentpic}
   alt="Real estate agent"
   // className="w-full h-64 md:h-72 object-fill rounded-lg shadow-2xl"
-  className="w-full h-64 md:h-72 object-cover object-center rounded-lg shadow-2xl"
+  className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl"
 
  />
 
