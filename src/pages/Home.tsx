@@ -1,5 +1,6 @@
 import { Search, MapPin, Home as HomeIcon,TrendingUp, Award, Users, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import agentpic from "/agentpic.jpg";
 
 const Home = () => {
   const featuredProperties = [
@@ -217,7 +218,7 @@ const Home = () => {
           className="w-full h-64 md:h-72 object-cover rounded-lg shadow-2xl "  
         /> */}
 
-<img src="/agentpic.jpg"
+<img src={agentpic}
   alt="Real estate agent"
   className="w-full h-64 md:h-72 object-contain rounded-lg shadow-2xl bg-emerald-700"
  />
