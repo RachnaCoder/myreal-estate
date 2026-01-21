@@ -210,8 +210,8 @@ const Home = () => {
           Learn More About Us
         </Link>
       </div>
-      <div className="relative">
-
+      {/* <div className="relative"> */}
+<div className="relative max-w-sm mx-auto">
       
       {/* <img src="https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=800"
           alt="Real estate agent"
@@ -221,7 +221,7 @@ const Home = () => {
 <img src={agentpic}
   alt="Real estate agent"
   // className="w-full h-64 md:h-72 object-fill rounded-lg shadow-2xl"
-  className="w-full h-64 md:h-72 object-fill rounded-lg shadow-2xl"
+  className="w-full h-64 md:h-72 object-contain rounded-lg shadow-2xl"
 
  />
 
