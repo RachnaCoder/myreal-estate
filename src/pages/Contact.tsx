@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -9,12 +9,42 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+ 
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(''); 
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus('');
+    
     alert('Thank you for your message! We will get back to you soon.');
     setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-  };
+
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCIuhPuwJeAi7vaPXi68fIhqy6OV0sQ79n8BQ9vebCg7u9hOzCyB42fnugiAwYBFID/exec"; 
+
+    const payload = {
+      ...formData,
+      timestamp: new Date().toISOString(),
+      
+    };
+
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+     setStatus('Thank you! Message sent and saved successfully.');
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Reset
+    } catch (error) {
+      setStatus('Error sending message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  }, [formData]);
+
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -42,6 +72,8 @@ const Contact = () => {
       details: ['Monday - Friday: 9am - 6pm', 'Saturday: 10am - 4pm', 'Sunday: Closed'],
     },
   ];
+
+
 
   return (
     <div className="min-h-screen pt-16">
@@ -177,13 +209,29 @@ const Contact = () => {
                   />
                 </div>
 
-                <button
+                {/* <button
                   type="submit"
                   className="w-full bg-emerald-600 text-white px-6 py-4 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2 text-lg font-semibold"
                 >
                   <span>Send Message</span>
                   <Send className="w-5 h-5" />
-                </button>
+                </button> */}
+
+{status && (
+        <div className={`p-4 rounded-lg ${status.includes('successfully') ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'}`}>
+          {status}
+        </div>
+      )}
+
+        <button
+        type="submit"
+        disabled={loading}
+        className="w-full bg-emerald-600 text-white px-6 py-4 rounded-lg hover:bg-emerald-700 transition-colors flex items-center justify-center space-x-2 text-lg font-semibold disabled:opacity-50"
+      >
+        <Send className="w-5 h-5" />
+        <span>{loading ? 'Sending...' : 'Send Message'}</span>
+      </button>
+
               </form>
             </div>
 
