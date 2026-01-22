@@ -13,36 +13,69 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(''); 
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus('');
+  // const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   setStatus('');
     
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+  //   alert('Thank you for your message! We will get back to you soon.');
+  //   setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
 
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCIuhPuwJeAi7vaPXi68fIhqy6OV0sQ79n8BQ9vebCg7u9hOzCyB42fnugiAwYBFID/exec"; 
+  // const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCIuhPuwJeAi7vaPXi68fIhqy6OV0sQ79n8BQ9vebCg7u9hOzCyB42fnugiAwYBFID/exec"; 
 
-    const payload = {
-      ...formData,
-      timestamp: new Date().toISOString(),
+  //   const payload = {
+  //     ...formData,
+  //     timestamp: new Date().toISOString(),
       
-    };
+  //   };
 
-    try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-     setStatus('Thank you! Message sent and saved successfully.');
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Reset
-    } catch (error) {
-      setStatus('Error sending message. Please try again.');
-    } finally {
-      setLoading(false);
-    }
-  }, [formData]);
+  //   try {
+  //     const response = await fetch(GOOGLE_SCRIPT_URL, {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(payload)
+  //     });
+  //    setStatus('Thank you! Message sent and saved successfully.');
+  //     setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Reset
+  //   } catch (error) {
+  //     setStatus('Error sending message. Please try again.');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }, [formData]);
+
+
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  e.preventDefault();
+  setLoading(true);
+  setStatus('');
+
+  const payload = new FormData();
+  payload.append('timestamp', new Date().toISOString());
+  payload.append('name', formData.name);
+  payload.append('email', formData.email);
+  payload.append('phone', formData.phone);
+  payload.append('subject', formData.subject);
+  payload.append('message', formData.message);
+
+  const GOOGLE_SCRIPT_URL = "hhttps://script.google.com/macros/s/AKfycbz9fLHhRKwwfcLtFZMKTcqoeaLg0BEazz425bDlhlOGJ2XuGec8_ZACE9JAD4ZxIE-4/exec"; 
+
+
+  try {
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',  // Bypasses CORS preflight
+      body: payload     // No JSON header = no preflight
+    });
+
+    setStatus('Thank you! Message sent and saved successfully.');
+    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+  } catch (error) {
+    setStatus('Error sending. Please try again.');
+  } finally {
+    setLoading(false);
+  }
+}, [formData]);
 
 
 
