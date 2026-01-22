@@ -58,7 +58,7 @@ const Contact = () => {
   payload.append('subject', formData.subject);
   payload.append('message', formData.message);
 
-  const GOOGLE_SCRIPT_URL = "hhttps://script.google.com/macros/s/AKfycbz9fLHhRKwwfcLtFZMKTcqoeaLg0BEazz425bDlhlOGJ2XuGec8_ZACE9JAD4ZxIE-4/exec"; 
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz9fLHhRKwwfcLtFZMKTcqoeaLg0BEazz425bDlhlOGJ2XuGec8_ZACE9JAD4ZxIE-4/exec"; 
 
 
   try {
