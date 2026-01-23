@@ -13,37 +13,6 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(''); 
 
-  // const handleSubmit = useCallback(async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setStatus('');
-    
-  //   alert('Thank you for your message! We will get back to you soon.');
-  //   setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-
-  // const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxCIuhPuwJeAi7vaPXi68fIhqy6OV0sQ79n8BQ9vebCg7u9hOzCyB42fnugiAwYBFID/exec"; 
-
-  //   const payload = {
-  //     ...formData,
-  //     timestamp: new Date().toISOString(),
-      
-  //   };
-
-  //   try {
-  //     const response = await fetch(GOOGLE_SCRIPT_URL, {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify(payload)
-  //     });
-  //    setStatus('Thank you! Message sent and saved successfully.');
-  //     setFormData({ name: '', email: '', phone: '', subject: '', message: '' }); // Reset
-  //   } catch (error) {
-  //     setStatus('Error sending message. Please try again.');
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // }, [formData]);
-
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
   e.preventDefault();
@@ -338,10 +307,8 @@ const Contact = () => {
     window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${text}`, "_blank");
   }}
 className="inline-flex items-center justify-center space-x-2 bg-white text-emerald-600 border-2 border-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors text-lg font-semibold">
-  💬 Chat with us
+  Chat with us
 </button>
-
-
 
 
 
