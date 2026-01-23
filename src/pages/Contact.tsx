@@ -321,13 +321,30 @@ const Contact = () => {
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
             </a>
-            <a
+
+            {/* <a
               href="mailto:info@estatepro.com"
               className="inline-flex items-center justify-center space-x-2 bg-white text-emerald-600 border-2 border-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors text-lg font-semibold"
             >
               <Mail className="w-5 h-5" />
               <span>Email Us</span>
-            </a>
+            </a> */}
+
+<button
+  onClick={() => {
+    const OWNER_WHATSAPP = "9721330481"; // Replace with owner's number
+    const propertyName = "3 BHK Flat"; // Change or pass dynamically
+    const text = encodeURIComponent(`Hi, I'm interested in this property: ${propertyName}`);
+    window.open(`https://wa.me/${OWNER_WHATSAPP}?text=${text}`, "_blank");
+  }}
+className="inline-flex items-center justify-center space-x-2 bg-white text-emerald-600 border-2 border-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition-colors text-lg font-semibold">
+  💬 Chat with us
+</button>
+
+
+
+
+
           </div>
         </div>
       </section>
